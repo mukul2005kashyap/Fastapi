@@ -33,3 +33,85 @@ It helps in:
 """
 compute field is feature in pydantic by which you can create the field whose value cannont be provided by the user but automatically 
 calculated from the other field in models and include in the response """
+
+# fastapi project setup 
+"""
+FastAPI Project Setup (Best Folder Structure)
+📌 Step 1: Create Project Folder
+mkdir fastapi_project
+cd fastapi_project
+
+Step 2: Create Virtual Environment
+        python -m venv venv
+
+
+Activate:
+
+Windows:
+venv\Scripts\activate
+
+Linux/Mac:
+source venv/bin/activate
+
+Step 3: Install Required Packages
+        pip install fastapi uvicorn
+
+
+For production:
+        pip install python-dotenv pydantic sqlalchemy
+
+Step 4: Recommended Project Structure
+fastapi_project/
+│── app/
+│   │── main.py
+│   │── __init__.py
+│   │
+│   ├── routers/
+│   │   │── user.py
+│   │   │── product.py
+│   │   │── __init__.py
+│   │
+│   ├── models/
+│   │   │── user_model.py
+│   │   │── __init__.py
+│   │
+│   ├── schemas/
+│   │   │── user_schema.py
+│   │   │── __init__.py
+│   │
+│   ├── database/
+│   │   │── db.py
+│   │   │── __init__.py
+│   │
+│   ├── services/
+│   │   │── user_service.py
+│   │   │── __init__.py
+│   │
+│   ├── core/
+│   │   │── config.py
+│   │   │── __init__.py
+│   │
+│   ├── utils/
+│   │   │── helper.py
+│   │   │── __init__.py
+│
+│── requirements.txt
+│── .env
+│── README.md
+"""
+
+# ROUTING
+"""
+routing is machanism that matches the client request (based on the http method or url path) to the server side end point 
+        (means the function or the method) that you write to handle the request """
+
+# pydantic models
+"""
+pydantic models are inherit by the pydantic. basemodel """
+
+# Dependency injections 
+"""
+Dependency injection is a designed pattern where required dependecy / reuseable logic like 
+authentication , configuration where injected into the endpointineasted of writing that manually multiple time we use thzat through depends 
+
+"""
