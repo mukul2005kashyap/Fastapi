@@ -115,3 +115,17 @@ Dependency injection is a designed pattern where required dependecy / reuseable 
 authentication , configuration where injected into the endpointineasted of writing that manually multiple time we use thzat through depends 
 
 """
+
+from fastapi import FastAPI, Depends, HTTPException
+
+app = FastAPI()
+
+def verify_token(token: str = "abc123"):
+    if token != "abc123":
+        raise HTTPException(status_code=401, detail="Invalid Token")
+    return token
+
+@app.get("/profile")
+def get_profile(token: str = Depends(verify_token)):
+    return {"message": "Welcome!", "token": token}
+
